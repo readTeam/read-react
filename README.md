@@ -1,77 +1,40 @@
-# [React](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Coverage Status](https://img.shields.io/coveralls/facebook/react/master.svg?style=flat)](https://coveralls.io/github/facebook/react?branch=master) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+# 源码阅读计划第一期 （React 7.9 ~ 10.14）
 
-React is a JavaScript library for building user interfaces.
+## 源码版本
 
-* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
-* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native/).
+v16.4.1
 
-[Learn how to use React in your own project](https://reactjs.org/docs/getting-started.html).
+## 提交地址 
 
-## Installation
+* 地址  https://github.com/readTeam/read-react/tree/read
+* 分支  read
 
-React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
+## 要求
 
-* Use [Online Playgrounds](https://reactjs.org/docs/getting-started.html#online-playgrounds) to get a taste of React.
-* [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) as a `<script>` tag in one minute.
-* [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html) if you're looking for a powerful JavaScript toolchain.
+参与者需有github账号，加入readTeam Organization
 
-You can use React as a `<script>` tag from a [CDN](https://reactjs.org/docs/cdn-links.html), or as a `react` package on [npm](https://www.npmjs.com/).
+共14周，每周阅读时间不小于3h，整个阅读周期内至少担任领读1次。
 
-## Documentation
 
-You can find the React documentation [on the website](https://reactjs.org/docs).  
+## 阅读流程
 
-Check out the [Getting Started](https://reactjs.org/docs/getting-started.html) page for a quick overview.
+1. clone代码到本地，认领阅读模块，作为该模块领读人
+2. 切出分支，阅读代码，添加注释
+3. 提交代码，创建PR，@全员
+4. 全员阅读PR，讨论，提交comment
+5. 修改注释，重新提交代码
+6. 重复4、5，直到全员无疑议，跟读通过。
+7. 继续下一次领读，直至本期结束或源码阅读完毕。
 
-The documentation is divided into several sections:
+## 说明
 
-* [Tutorial](https://reactjs.org/tutorial/tutorial.html)
-* [Main Concepts](https://reactjs.org/docs/hello-world.html)
-* [Advanced Guides](https://reactjs.org/docs/jsx-in-depth.html)
-* [API Reference](https://reactjs.org/docs/react-api.html)
-* [Where to Get Support](https://reactjs.org/community/support.html)
-* [Contributing Guide](https://reactjs.org/docs/how-to-contribute.html)
+* 领读人为自愿原则。
+* 模块可以被多次认领，只要领读人能有不同的解读。
+* 某一模块的领读可以是另一模块的跟读，并行进行。
+* 未承担领读任务的成员亦须阅读源码，积极参与讨论。
+* 建议每一模块分配两位领读人，两人分别阅读该模块。阅读完成后互相审核、修改后再行提交PR，其余人进行跟读。
+* 一次领读的模块不宜过大。
+* 如因故（如代码耦合性强等）代码模块过大，建议将大模块的领读拆成多个子模块的领读。提交多次PR，分模块进行讨论。
+* 大模块的领读以两周以内为宜，最好不超过三周。
+* 跟读人在PR内进行评论、回复。对于有疑问需要展开的可以新建issue进行讨论。
 
-You can improve it by sending pull requests to [this repository](https://github.com/reactjs/reactjs.org).
-
-## Examples
-
-We have several examples [on the website](https://reactjs.org/). Here is the first one to get you started:
-
-```jsx
-class HelloMessage extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
-}
-
-ReactDOM.render(
-  <HelloMessage name="Taylor" />,
-  document.getElementById('container')
-);
-```
-
-This example will render "Hello Taylor" into a container on the page.
-
-You'll notice that we used an HTML-like syntax; [we call it JSX](https://reactjs.org/docs/introducing-jsx.html). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. If you're using React as a `<script>` tag, read [this section](https://reactjs.org/docs/add-react-to-a-website.html#optional-try-react-with-jsx) on integrating JSX; otherwise, the [recommended JavaScript toolchains](https://reactjs.org/docs/create-a-new-react-app.html) handle it automatically.
-
-## Contributing
-
-The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
-
-### [Code of Conduct](https://code.facebook.com/codeofconduct)
-
-Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.facebook.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
-
-### [Contributing Guide](https://reactjs.org/contributing/how-to-contribute.html)
-
-Read our [contributing guide](https://reactjs.org/contributing/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
-
-### Good First Issues
-
-To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
-
-### License
-
-React is [MIT licensed](./LICENSE).
